@@ -7,8 +7,7 @@ import (
 func main() {
 	app := fiber.New()
 	setupRoutes(app)
-	err := app.Listen(":3000")
-	if err != nil {
+	if err := app.Listen(":3000"); err != nil {
 		panic(err)
 	}
 }
